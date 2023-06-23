@@ -1,0 +1,23 @@
+--Query: To create a trigger (raise a trigger) when a record is inserted 
+	   in any relation.
+
+--PL/SQL Block:
+
+create trigger ins_emp
+after insert on empsal
+begin
+    dbms_output.put_line('Row inserted successfully');
+end;
+ 
+--Output:
+
+Trigger created.
+
+--------------------------------------------------
+
+insert into empsal values(102,'Suresh',95000.00);
+
+Row inserted successfully.
+
+1 row created.
+
